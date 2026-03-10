@@ -1,0 +1,11 @@
+.logo {
+  float: left;
+  margin-top:60px ;
+  margin-left:100px; /* el margen que quieras */
+  width: 80px;
+}
+.titulo-uis {
+  text-align: right;
+  margin-right: 200px;
+  margin-top: 70px;
+}
