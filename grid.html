@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Diseño basado en Grid</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+            background: #eaf7f7;
+        }
+
+        .titulo {
+            text-align: center;
+            padding: 20px;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .subtitulo {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .grid-container {
+
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            grid-template-rows: calc(100vh - 120px);
+
+            gap: 10px;
+            padding: 10px;
+
+        }
+
+        /* MENU */
+
+        .menu {
+            background: #dff3f3;
+            padding: 15px;
+        }
+
+        .menu a {
+            display: block;
+            margin: 10px 0;
+            text-decoration: none;
+            color: #003366;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        /* CONTENIDO */
+
+        .contenido {
+            display: none;
+            width: 100%;
+            height: 100%;
+        }
+
+        .contenido.activo {
+            display: block;
+        }
+
+        .box {
+            background: white;
+            border: 2px solid #ccc;
+            overflow: hidden;
+        }
+
+        /* IFRAME */
+
+        .contenido iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* IMAGEN */
+
+        .contenido img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="titulo">
+        DISEÑO BASADO EN GRID
+    </div>
+
+    <div class="subtitulo">
+        Diseño a seis columnas<br>
+        UNIVERSIDAD INDUSTRIAL DE SANTANDER
+    </div>
+
+    <div class="grid-container">
+
+        <!-- MENU -->
+        <div class="menu">
+
+            <a onclick="mostrar('meiweb')">MeiWeb</a>
+
+            <a onclick="mostrar('uis')">UIS</a>
+
+            <a onclick="mostrar('barca')">Barca</a>
+
+            <a onclick="mostrar('novios')">Pareja de Novios</a>
+
+        </div>
+
+        <!-- CONTENIDO -->
+        <div class="box">
+
+            <div class="contenido activo" id="meiweb">
+                <iframe src="https://meiweb24.uis.edu.co/meiweb/portal/"></iframe>
+            </div>
+
+            <div class="contenido" id="uis">
+                <iframe src="https://www.uis.edu.co"></iframe>
+            </div>
+
+            <div class="contenido" id="barca">
+                <iframe src="https://www.fcbarcelona.com"></iframe>
+            </div>
+
+            <div class="contenido" id="novios">
+                <img src="novios.jpg">
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+
+        function mostrar(id) {
+
+            let paginas = document.querySelectorAll(".contenido");
+
+            paginas.forEach(pagina => {
+                pagina.classList.remove("activo");
+            });
+
+            document.getElementById(id).classList.add("activo");
+
+        }
+
+    </script>
+
+</body>
+
+</html>
