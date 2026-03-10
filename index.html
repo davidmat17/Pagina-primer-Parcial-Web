@@ -12,6 +12,66 @@
       max-width: 200px;
       margin: auto;
     }
+
+    /* Parte 5 del footer Arnold */
+    .footer-integrantes {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: auto auto;
+      gap: 0;
+      background-color: #1a1a2e;
+      color: #e0e0e0;
+      width: 100%;
+    }
+
+    .footer-celda {
+      padding: 6px 8px;
+      border: 1px solid #2d2d5e;
+      text-align: center;
+    }
+
+    .footer-celda.nombre {
+      background-color: #16213e;
+      font-weight: bold;
+      font-size: 0.75rem;
+      color: #a8d8ea;
+      border-bottom: none;
+    }
+
+    .footer-celda.descripcion {
+      background-color: #0f3460;
+      font-size: 0.7rem;
+      color: #c9d6df;
+    }
+
+    .footer-titulo {
+      background-color: #e94560;
+      color: white;
+      text-align: center;
+      padding: 5px;
+      font-size: 0.8rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    /* Lo del responsibe */
+    @media (max-width: 575px) {
+      .footer-integrantes {
+        background-color: #2c003e;
+      }
+
+      .footer-celda {
+        font-size: 0.5rem !important;
+      }
+
+      .footer-celda.nombre {
+        font-size: 0.5rem !important;
+      }
+
+      .footer-celda.descripcion {
+        font-size: 0.5rem !important;
+      }
+    }
   </style>
 </head>
 
@@ -123,9 +183,38 @@
       </div>
 
     </div>
-    <div class="row" style="background-color:green">
-      <div class="col">
-        FOOTER
+    <!-- FOOTER - PUNTO 5: Grid 2 filas x 4 columnas -->
+    <div class="row">
+      <div class="col p-0">
+        <div class="footer-titulo">INTEGRANTES DEL GRUPO</div>
+        <div class="footer-integrantes">
+          <!-- FILA 1: Nombres -->
+          <div class="footer-celda nombre">Duque Meza<br>Diego Andres</div>
+          <div class="footer-celda nombre">Martinez Arias<br>David Ricardo</div>
+          <div class="footer-celda nombre">Mojica Bello<br>Andres Santiago</div>
+          <div class="footer-celda nombre">Navarro Becerra<br>Arnold Steven</div>
+          <!-- FILA 2: Descripciones -->
+          <div class="footer-celda descripcion">
+            Cod: 2220031<br>
+            Ing. de Sistemas<br>
+            
+          </div>
+          <div class="footer-celda descripcion">
+            Cod: 2231879<br>
+            Ing. de Sistemas<br>
+            
+          </div>
+          <div class="footer-celda descripcion">
+            Cod: 2235160<br>
+            Ing. de Sistemas<br>
+           
+          </div>
+          <div class="footer-celda descripcion">
+            Cod: 2232729<br>
+            Ing. de Sistemas<br>
+           
+          </div>
+        </div>
       </div>
     </div>
   </div>
