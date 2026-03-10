@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <title>Carrusel Animales</title>
+
+    <style>
+        body {
+            background-color: lightblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .card img {
+            height: 200px;
+            object-fit: cover;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="carouselAnimales" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000"
+        data-bs-wrap="true">
+
+        <div class="carousel-inner text-center">
+
+            <!-- PERRO -->
+            <div class="carousel-item active">
+                <div class="card mx-auto" style="width:18rem;">
+                    <img src="perro.png" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Perro</h5>
+                    </div>
+                </div>
+            </div>
+
+            <!-- GATO -->
+            <div class="carousel-item">
+                <div class="card mx-auto" style="width:18rem;">
+                    <img src="gato.png" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Gato</h5>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CONEJO -->
+            <div class="carousel-item">
+                <div class="card mx-auto" style="width:18rem;">
+                    <img src="conejo.png" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Conejo</h5>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LORO -->
+            <div class="carousel-item">
+                <div class="card mx-auto" style="width:18rem;">
+                    <img src="loro.png" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Loro</h5>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
